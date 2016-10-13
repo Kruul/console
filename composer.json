@@ -6,7 +6,8 @@
         "console",
 	"kruul"
     ],
-    "homepage": "",
+    "homepage": "http://backfire.com.ua",
+    "minimum-stability": "dev",
     "repositories": [
 	{ "url": "https://github.com/kruul/logger.git", "type": "git" }
     ],
