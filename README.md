@@ -1,2 +1,3 @@
-# console skeleton на базе symfony/console
+# console skeleton
+на базе symfony/console + что-то незаконченое ...
 
