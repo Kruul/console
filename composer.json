@@ -1,0 +1,33 @@
+{
+    "name": "symfony console sceleton",
+    "description": "Skeleton Application for Zend Framework zend-mvc applications",
+    "type": "project",
+    "keywords": [
+        "console",
+	"kruul"
+    ],
+    "homepage": "",
+    "repositories": [
+	{ "url": "https://github.com/kruul/logger.git", "type": "git" }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "symfony/console": "^3.1",
+	"pimple/pimple": "^3.0",
+        "kruul/logger" : "*"
+    },
+    "autoload": {
+        "classmap": [
+            "vendor/kruul"
+        ],
+        "psr-4": {
+            "About\\": "module/About/src/"
+        }
+
+    },
+    "scripts": {
+        "test": "phpunit",
+	"al" : "composer.phar dumpautoload"
+    }
+
+}
