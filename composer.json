@@ -22,10 +22,12 @@
     "autoload": {
         "classmap": [
             "vendor/kruul"
+
         ],
         "psr-4": {
             "About\\": "module/About/src/",
-	    "Accountsync\\": "module/Accountsync/src/"
+  	        "Accountsync\\": "module/Accountsync/src/",
+            "Kruul\\": "vendor/Kruul"
         }
 
     },

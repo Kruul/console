@@ -1,10 +1,10 @@
 <?php
 namespace Accountsync\Model;
+use Kruul\Pdodb;
 
 class AccountsyncMapper{
     private $AdapterOSS;
     private $AdapterCabinet;
-
 
     function __construct($adapterOSS=null,$adapterCabinet=null){
 	  	$this->AdapterOSS=$adapterOSS;
@@ -13,6 +13,11 @@ class AccountsyncMapper{
 
     function getNewClient($datebeg=null,$dateend=null){
     	// по умолчанию $datebeg=SYSDATE-1 ; $dateend=SYSDATE
+       $db=$this->AdapterCabinet;
+       $res=$db->query('select * from language');
+
+       print_r($res->fetch());
+
     	$sql=<<<SQL
 select pa.name,pa.id
   from personalaccount pa,

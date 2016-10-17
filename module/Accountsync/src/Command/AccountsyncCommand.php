@@ -7,7 +7,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use Kruul\Logger\Logger;
+use Kruul\Logger;
+use Kruul\Logger\Writer\FileWriter;
+use Kruul\Logger\Writer\SymfonyConsoleWriter;
 use Accountsync\Model\AccountsyncMapper;
 
 class AccountsyncCommand extends Command{
@@ -46,9 +48,9 @@ EOT
 
         $datebeg = $in->getOption('datebeg');
         if (!$datebeg) $datebeg=date('Ymd');
-        $out->writeln($datebeg);
+//        $out->writeln($datebeg);
 
-        $mapper=new AccountsyncMapper();
+        $mapper=new AccountsyncMapper(null,$this->container->offsetget('dbcabinet'));
         $mapper->getNewClient();
 
   }
