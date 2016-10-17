@@ -1,4 +1,4 @@
 <?php
 return ['dbcabinet'=>
-				/*secret*/
+				/*secret2*/
 		];
